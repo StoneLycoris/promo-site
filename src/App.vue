@@ -3,6 +3,7 @@
     <Hero />
     <About />
     <Experience />
+    <TechSphere />
 
   </div>
 </template>
@@ -10,7 +11,8 @@
 <script setup lang="ts">
 import Hero from '@/components/Hero/Hero.vue';
 import About from '@/components/About/About.vue';
-import Experience from './components/Experience/Experience.vue';
+import Experience from '@/components/Experience/Experience.vue';
+import TechSphere from '@/components/TechSphere/TechSphere.vue';
 </script>
 
 <style scoped lang="scss">
