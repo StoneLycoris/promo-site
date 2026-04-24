@@ -20,7 +20,7 @@ useTechSphere(canvasRef)
 .tech {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 96vh;
 
   &__canvas {
     display: block;

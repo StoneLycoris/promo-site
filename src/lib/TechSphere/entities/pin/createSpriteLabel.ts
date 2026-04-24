@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import type { Skill } from '@/types/skills'
+import type { Skill } from '@/types/skill'
 
 export function createSpriteLabel(skill: Skill): THREE.Sprite {
   const canvas = document.createElement('canvas')
