@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import type { Skill } from '@/types/skills'
+import type { Skill } from '@/types/skill'
 import type { SkillPin } from '@/types/skillPin'
 
 import { fibonacciSpherePoint } from '@/lib/TechSphere/entities/pin/latLon'

@@ -1,0 +1,71 @@
+<template>
+  <section class="contacts">
+    <div class="contacts__container">
+      <!-- HEADER -->
+      <div class="contacts__header">
+        <h2 class="contacts__title">
+          Contacts
+        </h2>
+
+        <p class="contacts__subtitle">
+          Открыта к новым проектам и интересным задачам. Буду рада обсудить сотрудничество.
+        </p>
+      </div>
+
+      <!-- GRID -->
+      <div class="contacts__grid">
+        <ContactCard
+          v-for="contact in contacts"
+          :key="contact.id"
+          :contact="contact"
+        />
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { contacts } from '@/data/contacts'
+import ContactCard from './ContactCard.vue'
+</script>
+
+<style scoped lang="scss">
+.contacts {
+  position: relative;
+  padding: 0px 24px 120px;
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+}
+</style>

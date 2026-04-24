@@ -4,7 +4,7 @@
     <About />
     <Experience />
     <TechSphere />
-
+    <ContactsSection />
   </div>
 </template>
 
@@ -13,6 +13,7 @@ import Hero from '@/components/Hero/Hero.vue';
 import About from '@/components/About/About.vue';
 import Experience from '@/components/Experience/Experience.vue';
 import TechSphere from '@/components/TechSphere/TechSphere.vue';
+import ContactsSection from './components/Contacts/ContactsSection.vue';
 </script>
 
 <style scoped lang="scss">
