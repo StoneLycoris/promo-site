@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -37,11 +37,6 @@ jobs:
         with:
           version: 9
           run_install: false
-
-      - name: Check versions
-        run: |
-          node -v
-          pnpm -v
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
