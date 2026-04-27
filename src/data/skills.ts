@@ -7,7 +7,7 @@ export const skills: Skill[] = [
     description:
       'Composition API, реактивность, управление состоянием компонентов, оптимизация производительности рендеринга',
     color: '#42b883',
-    icon: '/icons/vue.svg',
+    icon: `${import.meta.env.BASE_URL}icons/vue.svg`
   },
 
   {
@@ -16,7 +16,7 @@ export const skills: Skill[] = [
     description:
       'Статическая типизация, generics, utility types, строгая типизация API и компонентов',
     color: '#3178c6',
-    icon: '/icons/typescript.svg',
+    icon: `${import.meta.env.BASE_URL}icons/typescript.svg`,
   },
 
   {
@@ -25,7 +25,7 @@ export const skills: Skill[] = [
     description:
       'Управление состоянием, модульная архитектура store, SSR-совместимость, замена Vuex',
     color: '#ffd859',
-    icon: '/icons/pinia.svg',
+    icon: `${import.meta.env.BASE_URL}icons/pinia.svg`,
   },
 
   {
@@ -34,7 +34,7 @@ export const skills: Skill[] = [
     description:
       'Быстрая сборка, HMR, оптимизированный dev-server, production bundle оптимизация',
     color: '#a855f7',
-    icon: '/icons/vite.svg',
+    icon: `${import.meta.env.BASE_URL}icons/vite.svg`,
   },
 
   {
@@ -43,7 +43,7 @@ export const skills: Skill[] = [
     description:
       'Маршрутизация SPA, динамические маршруты, guards, lazy loading страниц',
     color: '#4f46e5',
-    icon: '/icons/router.svg',
+    icon: `${import.meta.env.BASE_URL}icons/router.svg`,
   },
 
   {
@@ -52,7 +52,7 @@ export const skills: Skill[] = [
     description:
       'SSR/SSG, серверные API (Nitro), auto-imports, модульная архитектура',
     color: '#00dc82',
-    icon: '/icons/nuxtjs.svg',
+    icon: `${import.meta.env.BASE_URL}icons/nuxtjs.svg`,
   },
 
   {
@@ -61,7 +61,7 @@ export const skills: Skill[] = [
     description:
       'Unit-тестирование компонентов и логики, быстрый тест-раннер на базе Vite',
     color: '#6ee7b7',
-    icon: '/icons/vitest.svg',
+    icon: `${import.meta.env.BASE_URL}icons/vitest.svg`,
   },
 
   {
@@ -70,7 +70,7 @@ export const skills: Skill[] = [
     description:
       'Options API, mixins, lifecycle hooks, классическая архитектура Vue-приложений',
     color: '#41b883',
-    icon: '/icons/vue.svg',
+    icon: `${import.meta.env.BASE_URL}icons/vue.svg`,
   },
 
   {
@@ -79,7 +79,7 @@ export const skills: Skill[] = [
     description:
       'Глобальное состояние приложения, actions/mutations, централизованный store',
     color: '#2c3e50',
-    icon: '/icons/vuex.svg',
+    icon: `${import.meta.env.BASE_URL}icons/vuex.svg`,
   },
 
   {
@@ -88,7 +88,7 @@ export const skills: Skill[] = [
     description:
       'Следующее поколение Nuxt: улучшенный SSR, архитектурные оптимизации, Nitro runtime',
     color: '#00dc82',
-    icon: '/icons/nuxt.svg',
+    icon: `${import.meta.env.BASE_URL}icons/nuxt.svg`,
   },
 
   {
@@ -97,7 +97,7 @@ export const skills: Skill[] = [
     description:
       'Сборка модулей, loaders, plugins, настройка сложных билд-конфигураций',
     color: '#1c78c0',
-    icon: '/icons/webpack.svg',
+    icon: `${import.meta.env.BASE_URL}icons/webpack.svg`,
   },
 
   {
@@ -106,7 +106,7 @@ export const skills: Skill[] = [
     description:
       'Unit и integration тестирование, mocking, snapshot testing',
     color: '#99425b',
-    icon: '/icons/jest.svg',
+    icon: `${import.meta.env.BASE_URL}icons/jest.svg`,
   },
 
   {
@@ -115,7 +115,7 @@ export const skills: Skill[] = [
     description:
       'Семантическая верстка, кроссбраузерная вёрстка, a11y',
     color: '#e34c26',
-    icon: '/icons/html.svg',
+    icon: `${import.meta.env.BASE_URL}icons/html.svg`,
   },
 
   {
@@ -124,7 +124,7 @@ export const skills: Skill[] = [
     description:
       'Адаптивный дизайн, Flexbox, Grid, анимации',
     color: '#e34c26',
-    icon: '/icons/css.svg',
+    icon: `${import.meta.env.BASE_URL}icons/css.svg`,
   },
 
   {
@@ -133,7 +133,7 @@ export const skills: Skill[] = [
     description:
       'Асинхронность, event loop, прототипы, модули, современные ES стандарты',
     color: '#f7df1e',
-    icon: '/icons/javascript.svg',
+    icon: `${import.meta.env.BASE_URL}icons/javascript.svg`,
   },
 
   {
@@ -142,7 +142,7 @@ export const skills: Skill[] = [
     description:
       'Utility-first подход, быстрый UI-дизайн, кастомизация дизайн-систем',
     color: '#38bdf8',
-    icon: '/icons/tailwind.svg',
+    icon: `${import.meta.env.BASE_URL}icons/tailwind.svg`,
   },
 
   {
@@ -151,7 +151,7 @@ export const skills: Skill[] = [
     description:
       'Material Design компоненты, UI kit, быстрый прототипинг интерфейсов',
     color: '#1867c0',
-    icon: '/icons/vuetify.svg',
+    icon: `${import.meta.env.BASE_URL}icons/vuetify.svg`,
   },
 
   {
@@ -160,7 +160,7 @@ export const skills: Skill[] = [
     description:
       'Проектирование и интеграция RESTful API, работа с HTTP протоколом',
     color: '#10b981',
-    icon: '/icons/rest.svg',
+    icon: `${import.meta.env.BASE_URL}icons/rest.svg`,
   },
 
   {
@@ -169,7 +169,7 @@ export const skills: Skill[] = [
     description:
       'Высокопроизводительное RPC взаимодействие между сервисами',
     color: '#6366f1',
-    icon: '/icons/grpc.svg',
+    icon: `${import.meta.env.BASE_URL}icons/grpc.svg`,
   },
 
   {
@@ -178,7 +178,7 @@ export const skills: Skill[] = [
     description:
       'Контроль версий, branching strategies, code review, работа в команде',
     color: '#f05032',
-    icon: '/icons/git.svg',
+    icon: `${import.meta.env.BASE_URL}icons/git.svg`,
   },
 
   {
@@ -187,6 +187,6 @@ export const skills: Skill[] = [
     description:
       'Контейнеризация приложений, изоляция окружений, деплой и CI/CD',
     color: '#2496ed',
-    icon: '/icons/docker.svg',
+    icon: `${import.meta.env.BASE_URL}icons/docker.svg`,
   },
 ]
