@@ -10,7 +10,7 @@ export const contacts: Contact[] = [
     id: 'email',
     label: 'Email',
     value: 'zhilinskaia.elena@email.com',
-    href: 'mailto:your@email.com',
+    href: 'mailto:zhilinskaia.elena@email.com',
     icon: emailIcon,
   },
   {
