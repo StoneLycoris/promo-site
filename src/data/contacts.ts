@@ -9,8 +9,8 @@ export const contacts: Contact[] = [
   {
     id: 'email',
     label: 'Email',
-    value: 'zhilinskaia.elena@email.com',
-    href: 'mailto:zhilinskaia.elena@email.com',
+    value: 'zhilinskaia.elena@gmail.com',
+    href: 'mailto:zhilinskaia.elena@gmail.com',
     icon: emailIcon,
   },
   {
