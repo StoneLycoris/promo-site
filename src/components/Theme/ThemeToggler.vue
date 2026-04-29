@@ -40,9 +40,9 @@ const ariaLabel = computed(() =>
 <style scoped>
 .theme-toggle {
   position: fixed;
-  top: 24px;
-  right: 24px;
-
+  top: 10px;
+  right: 10px;
+  z-index: 1;
   width: 44px;
   height: 44px;
 
