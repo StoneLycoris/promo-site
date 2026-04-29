@@ -72,7 +72,7 @@
 
       projects: [
         {
-          name: 'Web projects (landing pages, e-commerce, clinics)',
+          name: 'Веб-проекты (landing pages, e-commerce, клиники)',
           stack: ['HTML', 'CSS', 'JavaScript'],
           achievements: [
             'Увеличила accessibility score с 34 до 62 (WCAG AA).',

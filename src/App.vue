@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <ThemeToggler />
     <Hero />
     <About />
     <Experience />
@@ -9,6 +10,7 @@
 </template>
 
 <script setup lang="ts">
+import ThemeToggler from './components/Theme/ThemeToggler.vue';
 import Hero from '@/components/Hero/Hero.vue';
 import About from '@/components/About/About.vue';
 import Experience from '@/components/Experience/Experience.vue';

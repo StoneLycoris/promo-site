@@ -69,10 +69,11 @@ function handleMouseMove(e: MouseEvent) {
 
   border-radius: 18px;
 
-  background: rgba(18, 20, 28, 0.55);
+  background: var(--surface-elevated);
   backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
 
   padding: 18px 20px;
 
@@ -90,9 +91,9 @@ function handleMouseMove(e: MouseEvent) {
     inset: 0;
 
     background: radial-gradient(
-      400px circle at var(--x, 50%) var(--y, 50%),
-      rgba(170, 59, 255, 0.15),
-      transparent 40%
+      500px circle at var(--x, 50%) var(--y, 50%),
+      var(--accent-bg),
+      transparent 45%
     );
 
     opacity: 0;
@@ -100,11 +101,13 @@ function handleMouseMove(e: MouseEvent) {
   }
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--accent-border);
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    box-shadow:
+      0 20px 45px rgba(0, 0, 0, 0.08),
+      var(--shadow);
 
     &::before {
       opacity: 1;
@@ -129,35 +132,35 @@ function handleMouseMove(e: MouseEvent) {
   }
 
   &__left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-&__icon {
-  width: 18px;
-  height: 18px;
-  opacity: 0.7;
+  &__icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    transition: 0.2s ease;
+    filter: var(--icon-filter);
+  }
 
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-&:hover &__icon {
-  opacity: 1;
-  transform: translateY(-1px);
-}
+  &:hover &__icon {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
 
   &__label {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text);
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
   &__value {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 500;
+    color: var(--text-h);
+    font-weight: 600;
   }
 
   &__copy {
@@ -166,10 +169,10 @@ function handleMouseMove(e: MouseEvent) {
 
     border-radius: 999px;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
 
-    background: rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+    color: var(--text);
 
     cursor: pointer;
 
@@ -179,13 +182,13 @@ function handleMouseMove(e: MouseEvent) {
     transition: all 0.2s ease;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.9);
+      background: var(--accent-bg);
+      color: var(--text-h);
     }
   }
 
   &__copied {
-    color: #42ffb3;
+    color: var(--accent);
   }
 }
 </style>

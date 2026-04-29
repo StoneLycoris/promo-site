@@ -6,6 +6,7 @@
       v-for="item in experience"
       :key="item.id"
       class="experience__item"
+      @mousemove="handleMouseMove"
     >
 
       <div class="experience__header">
@@ -66,6 +67,17 @@
 
 <script setup lang="ts">
 import { experience } from '@/data/experience'
+
+function handleMouseMove(e: MouseEvent) {
+  const target = e.currentTarget as HTMLElement
+  const rect = target.getBoundingClientRect()
+
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+
+  target.style.setProperty('--x', `${x}px`)
+  target.style.setProperty('--y', `${y}px`)
+}
 </script>
 
 <style scoped lang="scss">
@@ -77,11 +89,55 @@ import { experience } from '@/data/experience'
   }
 
   &__item {
-    padding: 24px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    margin-bottom: 24px;
-    background: var(--bg);
+    padding: 28px;
+
+  border-radius: 16px;
+
+  background: var(--surface-elevated);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+
+  backdrop-filter: blur(12px);
+
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+      500px circle at var(--x, 50%) var(--y, 50%),
+      var(--accent-bg),
+      transparent 45%
+    );
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--accent-border);
+
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.08),
+      var(--shadow);
+
+    &::before {
+      opacity: 1;
+    }
+  }
   }
 
   &__header {
@@ -100,34 +156,48 @@ import { experience } from '@/data/experience'
 
 .summary {
   margin: 12px 0 16px;
-  color: var(--text-h);
+  color: var(--text);
+  line-height: 1.5;
 }
 
 .project {
-  margin-top: 16px;
+  margin-top: 18px;
 
   h4 {
     margin-bottom: 8px;
+    color: var(--text);
   }
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 8px;
+  gap: 8px;
+  margin-bottom: 10px;
 
   span {
     background: var(--accent-bg);
     color: var(--accent);
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 13px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    border: 1px solid var(--accent-border);
+
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
   }
 
   &-libraries,
   &-tests {
-    opacity: 0.7;
+    opacity: 0.6;
   }
 }
 
@@ -136,11 +206,12 @@ import { experience } from '@/data/experience'
 
   li {
     margin-bottom: 6px;
+    line-height: 1.5;
   }
 }
 
 .muted {
-  opacity: 0.7;
+  opacity: 0.6;
   font-size: 14px;
 }
 </style>

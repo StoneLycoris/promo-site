@@ -50,14 +50,11 @@ import ContactCard from './ContactCard.vue'
   &__title {
     font-size: 28px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
   }
 
   &__subtitle {
     font-size: 16px;
     line-height: 1.6;
-
-    color: rgba(255, 255, 255, 0.6);
   }
 
   &__grid {
