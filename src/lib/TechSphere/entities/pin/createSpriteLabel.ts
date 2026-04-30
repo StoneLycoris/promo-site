@@ -54,16 +54,16 @@ function drawBase(
 ) {
   const radius = 20
 
-  context.fillStyle = 'rgba(18, 20, 28, 0.58)'
+  context.fillStyle = 'rgba(18, 20, 28, 0.59)'
   roundRect(context, 0, 0, width, height, radius)
   context.fill()
 
-  context.strokeStyle = 'rgba(255,255,255,0.05)'
+  context.strokeStyle = 'rgba(255,255,255,0.07)'
   context.lineWidth = 1
   roundRect(context, 0.5, 0.5, width - 1, height - 1, radius)
   context.stroke()
 
-  context.fillStyle = 'rgba(255,255,255,0.92)'
+  context.fillStyle = 'rgba(255,255,255,0.94)'
   context.font = '600 40px system-ui'
   context.textAlign = 'left'
   context.textBaseline = 'middle'
