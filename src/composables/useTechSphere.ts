@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, watch } from 'vue'
 import * as THREE from 'three'
 
 import { skills } from '@/data/skills'
@@ -8,9 +8,10 @@ import { createScene } from '@/lib/TechSphere/core/createScene'
 import { createCamera } from '@/lib/TechSphere/core/createCamera'
 import { createRenderer } from '@/lib/TechSphere/core/createRenderer'
 import { createControls } from '@/lib/TechSphere/core/createControls'
-import { createLights } from '@/lib/TechSphere/core/createLights'
+import { createLights, setLightsTheme, type SceneLights } from '@/lib/TechSphere/core/createLights'
+import { useTheme } from '@/composables/useTheme'
 
-import { createGlobe } from '@/lib/TechSphere/entities/globe/createGlobe'
+import { createGlobe, setGlobeTheme } from '@/lib/TechSphere/entities/globe/createGlobe'
 import { createPins } from '@/lib/TechSphere/entities/pin/createPins'
 
 import { createEngine } from '@/lib/TechSphere/engine/createEngine'
@@ -31,7 +32,11 @@ type TechSphereContext = {
   resizeSystem: ReturnType<typeof createResizeSystem>
 
   pins: SkillPin[]
+  globe: THREE.Mesh
+  lights: SceneLights
 }
+
+const { theme } = useTheme()
 
 export function useTechSphere(canvasRef: Ref<HTMLCanvasElement | null>) {
   const store = useTechSphereStore()
@@ -52,10 +57,17 @@ export function useTechSphere(canvasRef: Ref<HTMLCanvasElement | null>) {
 
     const controls = createControls(camera, canvas)
 
-    createLights(scene)
+    const lights = createLights(scene)
+    setLightsTheme(lights, theme.value)
 
     const globe = createGlobe()
     scene.add(globe)
+    setGlobeTheme(globe, theme.value)
+
+    watch(theme, (t) => {
+    setGlobeTheme(globe, t)
+    setLightsTheme(lights, t)
+  })
 
     const pins = createPins(globe, skills)
 
@@ -95,6 +107,8 @@ export function useTechSphere(canvasRef: Ref<HTMLCanvasElement | null>) {
       interaction,
       resizeSystem,
       pins,
+      globe,
+      lights,
     }
 
     window.addEventListener('mousemove', interaction.onMouseMove)
