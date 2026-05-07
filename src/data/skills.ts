@@ -100,6 +100,13 @@ export const skills: Skill[] = [
   },
 
   {
+    id: 'sass',
+    name: 'Sass / SCSS',
+    color: '#cc6699',
+    icon: `${import.meta.env.BASE_URL}icons/sass.svg`,
+  },
+
+  {
     id: 'js',
     name: 'JavaScript (ES6+)',
     color: '#f7df1e',
@@ -146,5 +153,26 @@ export const skills: Skill[] = [
     name: 'Docker',
     color: '#2496ed',
     icon: `${import.meta.env.BASE_URL}icons/docker.svg`,
+  },
+
+  {
+    id: 'postman',
+    name: 'Postman',
+    color: '#ff6c37',
+    icon: `${import.meta.env.BASE_URL}icons/postman.svg`,
+  },
+
+  {
+    id: 'swagger',
+    name: 'Swagger',
+    color: '#85ea2d',
+    icon: `${import.meta.env.BASE_URL}icons/swagger.svg`,
+  },
+
+  {
+    id: 'histoire',
+    name: 'Histoire',
+    color: '#8b5cf6',
+    icon: `${import.meta.env.BASE_URL}icons/histoire.svg`,
   },
 ]
