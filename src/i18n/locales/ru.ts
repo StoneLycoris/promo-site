@@ -1,5 +1,6 @@
 export default {
   hero: {
+    name: 'Елена Жилинская',
     title: 'Frontend Developer',
     subtitle: 'Vue 3 • TypeScript • Архитектура',
 
