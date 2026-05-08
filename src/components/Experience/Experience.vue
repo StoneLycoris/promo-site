@@ -2,7 +2,8 @@
   <section class="experience">
     <h2 class="experience__title">{{ $t('experience.title') }}</h2>
 
-    <div
+    <div class="experience__container">
+        <div
       v-for="item in experience"
       :key="item.id"
       class="experience__item"
@@ -58,6 +59,7 @@
         </ul>
       </div>
     </div>
+    </div>
   </section>
 </template>
 
@@ -92,6 +94,12 @@ function handleMouseMove(e: MouseEvent) {
     margin-bottom: 40px;
   }
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   &__item {
     padding: 28px;
 
@@ -103,8 +111,6 @@ function handleMouseMove(e: MouseEvent) {
 
   box-shadow: var(--shadow);
 
-  backdrop-filter: blur(12px);
-
   position: relative;
   overflow: hidden;
 
@@ -113,13 +119,15 @@ function handleMouseMove(e: MouseEvent) {
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 
+    will-change: transform;
+
   &::before {
     content: '';
     position: absolute;
     inset: 0;
 
     background: radial-gradient(
-      500px circle at var(--x, 50%) var(--y, 50%),
+      320px circle at var(--x, 50%) var(--y, 50%),
       var(--accent-bg),
       transparent 45%
     );
@@ -130,7 +138,7 @@ function handleMouseMove(e: MouseEvent) {
   }
 
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
 
     border-color: var(--accent-border);
 
